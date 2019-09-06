@@ -1,57 +1,42 @@
-# tip-calculator
+# Tip Calculator
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Author: Nicholas Borghese
 
-## Prerequisites
+This program takes a bill amount as an input, allows the user to select a tip percentage, and then outputs the tip amount as well as the total bill including tip.
 
-You will need the following things properly installed on your computer.
+## Time spent
+Describe the time you spent on the project.
+ * Tutorials, research: 1 hour
+ * Coding required stories: 3 hours
+ * Optional and extras: 1 hours
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+## User stories
 
-## Installation
+### Required
+ * [x] User can enter total bill amount
+ * [x] User can choose between at least three tip tiers (e.g. 15%, 18%, 20%) and see the total tip 
+ * [x] User can see the total with tip
 
-* `git clone <repository-url>` this repository
-* `cd tip-calculator`
-* `npm install`
+### Optional
 
-## Running / Development
+ * [ ] Add custom CSS to the calculator inputs
+ * [ ] Add a light/dark color theme toggle on the page
+ * [ ] User can enter tax amount
+ * [ ] Page is optimized for the viewport/browser size (i.e. scales to mobile & desktop sizes)
+ * [ ] Remember the previous bill amount when the user re-opens the browser
+ * [ ] Use [locale specific](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) currency and currency separators.
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+### Extra
 
-### Code Generators
+ * [x] Tip field and total with tip field are hidden until user clicks calculate
+ 
 
-Make use of the many generators for code, try `ember help generate` for more details
+## GIF Walkthrough
 
-### Running Tests
+![Walkthrough GIF](path/to/gif.gif)
 
-* `ember test`
-* `ember test --server`
+GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
-### Linting
+## Notes & shoutouts
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+Spent extra time figuring out how to hide elements until they are needed.
