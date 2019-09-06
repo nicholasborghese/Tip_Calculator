@@ -1,5 +1,84 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="container-fluid">
+    <div class="py-5 text-center">
+        <h2>Tip Calculator</h2>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-3 text-center">
+            <h6>How much was the bill?</h6>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" id="billAmount" aria-label="Amount">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-3 text-center">
+            <h6>How good was the service?</h6>
+            <div class="d-block my-3">
+                <select class="custom-select" id="percentage">
+                    <option disabled selected value="0">Choose a value</option>
+                    <option value=".1">10&#37;</option>
+                    <option value=".12">12&#37;</option>
+                    <option value=".15">15&#37;</option>
+                    <option value=".18">18&#37;</option>
+                    <option value=".20">20&#37;</option>
+                    <option value=".25">25&#37;</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-3 text-center">
+            <button type="button" id="calculate">Calculate!</button>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-3 my-3 text-center">
+            <div id="totalTip">
+                <h3>Tip Amount</h3>
+                <h4><sup>$</sup><span id="tip">0.00</span></h4>
+            </div>
+        </div>
+        <div class="col-3 my-3 text-center">
+            <div id="totalWithTip">
+                <h3>Total with Tip</h3>
+                <h4><sup>$</sup><span id="totalwithtip">0.00</span></h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.getElementById("totalTip").style.display = "none";
+    document.getElementById("totalWithTip").style.display = "none";
+
+    function calculateTip() {
+        var billAmount = document.getElementById("billAmount").value;
+        var percentage = document.getElementById("percentage").value;
+
+        var total = billAmount * percentage;
+        total = total.toFixed(2);
+
+        var totalwithtip = parseFloat(total) + parseFloat(billAmount);
+        totalwithtip = totalwithtip.toFixed(2);
+
+        document.getElementById("totalTip").style.display = "block";
+        document.getElementById("tip").innerHTML = total;
+        document.getElementById("totalWithTip").style.display = "block";
+        document.getElementById("totalwithtip").innerHTML = totalwithtip;
+
+    }
+
+    document.getElementById("calculate").onclick = function() {
+        calculateTip();
+    };
+</script>
 
 {{outlet}}
