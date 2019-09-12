@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+    <div class="col-3 text-center">
+        <h6>{{@question}}</h6>
+        <div class="d-block my-3">
+            <select class="custom-select" id="percentage">
+                <option disabled selected value="0">Choose a value</option>
+                {{#each @choices as |choice|}}
+                <option value={{choice}}>{{dec-to-percentage choice}}&#37;</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</div>
+
+{{yield}}
