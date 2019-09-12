@@ -3,17 +3,7 @@
         <h2>Tip Calculator</h2>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-3 text-center">
-            <h6>How much was the bill?</h6>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">$</span>
-                </div>
-                <input type="text" class="form-control" id="billAmount" aria-label="Amount">
-            </div>
-        </div>
-    </div>
+    <BillAmount @question="How much was the bill?" />
 
     {{!-- Service Check Goes Here --}}
     <ServiceCheck @question="How good was the service?" @choices={{this.model}} />
