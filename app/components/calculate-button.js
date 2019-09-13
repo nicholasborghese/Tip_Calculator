@@ -11,7 +11,7 @@ export default Component.extend({
 
             var totalwithtip = parseFloat(total) + parseFloat(billAmount);
             totalwithtip = totalwithtip.toFixed(2);
-
+            
             document.getElementById("totalTip").style.display = "block";
             document.getElementById("tip").innerHTML = total;
             document.getElementById("totalWithTip").style.display = "block";
