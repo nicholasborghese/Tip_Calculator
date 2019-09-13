@@ -12,26 +12,13 @@
     {{!-- Calculator Button Goes Here --}}
     <CalculateButton @buttontext="Calculate!" />
 
-    <div class="row justify-content-center">
-        <div class="col-3 my-3 text-center">
-            <div id="totalTip">
-                <h3>Tip Amount</h3>
-                <h4><sup>$</sup><span id="tip">0.00</span></h4>
-            </div>
-        </div>
-        <div class="col-3 my-3 text-center">
-            <div id="totalWithTip">
-                <h3>Total with Tip</h3>
-                <h4><sup>$</sup><span id="totalwithtip">0.00</span></h4>
-            </div>
-        </div>
-    </div>
+    {{!-- Totals Are Printed Here --}}
+    <TotalPrinter />
 
 </div>
 
 <script>
-    document.getElementById("totalTip").style.display = "none";
-    document.getElementById("totalWithTip").style.display = "none";    
+     
 </script>
 
 {{outlet}}
