@@ -1,20 +1,23 @@
 <div class="container-fluid">
-    <div class="py-5 text-center">
-        <h2>Tip Calculator</h2>
+    <div class="row justify-content-center">
+        <div class="content col-5">
+            <div class="py-5 text-center">
+                <h1>Tip Calculator</h1>
+            </div>
+
+            {{!-- Bill Amount Goes Here --}}
+            <BillAmount @question="How much was the bill?" />
+
+            {{!-- Service Check Goes Here --}}
+            <ServiceCheck @question="How was the service?" @choices={{this.model}} />
+
+            {{!-- Calculator Button Goes Here --}}
+            <CalculateButton @buttontext="Calculate!" />
+
+            {{!-- Totals Are Printed Here --}}
+            <TotalPrinter />
+        </div>
     </div>
-
-    {{!-- Bill Amount Goes Here --}}
-    <BillAmount @question="How much was the bill?" />
-
-    {{!-- Service Check Goes Here --}}
-    <ServiceCheck @question="How good was the service?" @choices={{this.model}} />
-
-    {{!-- Calculator Button Goes Here --}}
-    <CalculateButton @buttontext="Calculate!" />
-
-    {{!-- Totals Are Printed Here --}}
-    <TotalPrinter />
-
 </div>
 
 {{outlet}}
